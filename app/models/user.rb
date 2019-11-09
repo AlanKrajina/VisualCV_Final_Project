@@ -8,4 +8,7 @@ class User < ApplicationRecord
     has_many :contacts                    
     has_many :blogs                                       
     has_many :comments, through: :blogs      
+
+	validates :username, presence: true
+
 end
