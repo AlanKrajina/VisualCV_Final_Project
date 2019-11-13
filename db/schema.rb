@@ -23,13 +23,13 @@ ActiveRecord::Schema.define(version: 2019_11_09_115847) do
     t.string "title"
     t.string "content"
     t.integer "user_id"
-    t.integer "comment_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "comments", force: :cascade do |t|
     t.string "text"
+    t.integer "blog_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

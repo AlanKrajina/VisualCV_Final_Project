@@ -1,6 +1,8 @@
 class Blog < ApplicationRecord
     belongs_to :user
-    belongs_to :comment
+    has_many :comments
+
+#   belongs_to :comment
 
     validates :title, :content, presence: true
 

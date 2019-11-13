@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#alan = User.create(username: "Alan", password: "password")
-#alan = User.first
-#project1 = Project.create!(title: "Test project 1", content: "text text text text text text ", video_link: "https://www.youtube.com/", github: "https://github.com/", user_id: alan.id)
-#project2 = Project.create!(title: "Test project 2", content: "text text text text text text ", video_link: "https://www.youtube.com/", github: "https://github.com/", user_id: alan.id)
+alan = User.create(username: "Alan", password: "password")
+alan = User.first
+project1 = Project.create!(title: "Test project 1", content: "text text text text text text ", video_link: "https://www.youtube.com/", github: "https://github.com/", user_id: alan.id)
+project2 = Project.create!(title: "Test project 2", content: "text text text text text text ", video_link: "https://www.youtube.com/", github: "https://github.com/", user_id: alan.id)
 
 aboutTest = About.create!(content: "about text about text about text about text", user_id: alan.id)
 
@@ -20,13 +20,19 @@ educationTest = Education.create!(content: "curriculum info", school: "Flatiron 
 
 experienceTest = Experience.create!(company: "Apple", position: "Tech supp", content: "helping end users", user_id: alan.id)
 
-# blogs needs comment ID and user ID
-# has many blogs
 
 
-commentTest1 = Comment.create!(text: "some comment text for blog 1")
-commentTest2 = Comment.create!(text: "some comment text for blog 2")
+
+usersBlog1 = Blog.create!(title: "Blog title1", content:"blog content1", user_id: alan.id)
+usersBlog2 = Blog.create!(title: "Blog title2", content:"blog content2", user_id: alan.id)
+
+blogComment1 = Comment.create!(text: "some comment text for blog 1", blog_id: usersBlog1.id)
+blogComment2 = Comment.create!(text: "some comment text for blog 2", blog_id: usersBlog1.id)
 
 
-blogTest1 = Blog.create!(title: "Blog title1", content:"blog content1", user_id: alan.id, comment_id: commentTest1.id)
-blogTest2 = Blog.create!(title: "Blog title2", content:"blog content2", user_id: alan.id, comment_id: commentTest2.id)
+#commentTest1 = Comment.create!(text: "some comment text for blog 1")
+#commentTest2 = Comment.create!(text: "some comment text for blog 2")
+
+
+#blogTest1 = Blog.create!(title: "Blog title1", content:"blog content1", user_id: alan.id, comment_id: commentTest1.id)
+#blogTest2 = Blog.create!(title: "Blog title2", content:"blog content2", user_id: alan.id, comment_id: commentTest2.id)

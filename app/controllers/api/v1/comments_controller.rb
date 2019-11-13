@@ -26,10 +26,12 @@ class Api::V1::CommentsController < ApplicationController
 
 
 
-
+=begin 
   # POST /comments
   def create
     # byebug
+    @blog = Blog.find(params["blog_id"])
+
     @comment = current_user.comments.build(comment_params)
 
     if @comment.save
@@ -83,5 +85,6 @@ class Api::V1::CommentsController < ApplicationController
 
     def comment_params
         params.require(:comment).permit(:text)
-    end
+    end 
+=end
 end

@@ -1,7 +1,10 @@
 class Comment < ApplicationRecord
-    has_many :blogs
-    has_many :users, through: :blogs
+    belongs_to :blog
+#    has_many :users, through: :blogs
 
     validates :text, presence: true
 
 end
+
+
+# comment mora pripadat blogu
