@@ -23,7 +23,7 @@ class Api::V1::SessionsController < ApplicationController
     end
   
     def destroy
-      session.clear
+      session.clear #can be standalone - returns empty hash
       render json: {
         notice: "successfully logged out"
       }, status: :ok
