@@ -1,7 +1,7 @@
 class Api::V1::CommentsController < ApplicationController
 
     def index
-      #  if logged_in?
+      #  if logged_in? NE TREBA SIGN IN, SVI MOGU VIDJET i KOMENTIRAT
       #      @comments = current_user.comments
       #      render json: CommentSerializer.new(@comments)
       #    else
@@ -9,6 +9,10 @@ class Api::V1::CommentsController < ApplicationController
       #            error: "You must be logged in to see trips"
       #          }
       #  end
+
+
+
+
         @comments = Comment.all
     
         render json: @comments
@@ -22,17 +26,12 @@ class Api::V1::CommentsController < ApplicationController
 
 
 
-
-
-
-
-=begin 
   # POST /comments
   def create
-    # byebug
-    @blog = Blog.find(params["blog_id"])
 
-    @comment = current_user.comments.build(comment_params)
+    current_blog = Blog.find(params["blog_id"])
+
+    @comment = current_blog.comments.build(comment_params)
 
     if @comment.save
       render json:  CommentSerializer.new(@comment), status: :created
@@ -43,7 +42,8 @@ class Api::V1::CommentsController < ApplicationController
       render json: error_resp, status: :unprocessable_entity
     end
   end
-
+  
+=begin 
   # PATCH/PUT /trips/1
   def update
     if @comment.update(comment_params)
@@ -66,7 +66,8 @@ class Api::V1::CommentsController < ApplicationController
       }
       render json: error_resp, status: :unprocessable_entity
     end
-  end
+  end 
+=end
 
 
 

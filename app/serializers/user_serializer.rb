@@ -61,4 +61,16 @@ class UserSerializer
       }
     end
   end
+
+  attribute :comments do |user|
+    user.blogs.map do |blog|
+      
+      blog.comments.map do |comment|
+      {
+        text: comment.text,
+      }
+      end
+    end
+  end
+
 end
