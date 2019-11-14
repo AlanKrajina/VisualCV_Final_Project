@@ -54,14 +54,10 @@ class UserSerializer
   end
 
   attribute :blogs do |user|
-    user.blogs.map do |blog|
-      {
-        title: blog.title,
-        content: blog.content
-      }
-    end
+      BlogSerializer.new(user.blogs).as_json["data"]
   end
 
+  
   attribute :comments do |user|
     user.blogs.map do |blog|
       
