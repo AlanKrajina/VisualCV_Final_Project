@@ -1,22 +1,18 @@
 class Api::V1::CommentsController < ApplicationController
 
     def index
-      #  if logged_in? NE TREBA SIGN IN, SVI MOGU VIDJET i KOMENTIRAT
-      #      @comments = current_user.comments
-      #      render json: CommentSerializer.new(@comments)
-      #    else
-      #          render json: {
-      #            error: "You must be logged in to see trips"
-      #          }
-      #  end
+            @comments = current_user.comments
+            render json: CommentSerializer.new(@comments)
 
-
-
-
-        @comments = Comment.all
-    
-        render json: @comments
     end
+
+
+
+
+     #   @comments = Comment.all
+    
+    #    render json: @comments
+    
 
     def show
         @comment = Comment.find_by(id: params[:id])
