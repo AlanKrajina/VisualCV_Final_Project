@@ -17,8 +17,10 @@ aboutTest = About.create!(content: "about text about text about text about text"
 contactTest = Contact.create!(mail: "alan@mail.com", github: "https://github.com/AlanKrajina", linkedin: "https://www.linkedin.com/in/alankrajina/", user_id: alan.id)
 
 educationTest = Education.create!(content: "curriculum info", school: "Flatiron School", location: "online program", certification_name: "React course", certification_content: "react curriculum", user_id: alan.id)
+educationTest2 = Education.create!(content: "curriculum info2", school: "HSE college", location: "Zagreb", certification_name: "Udacity Front end developer", certification_content: "udacity curriculum", user_id: alan.id)
 
 experienceTest = Experience.create!(company: "Apple", position: "Tech supp", content: "helping end users", user_id: alan.id)
+experienceTest2 = Experience.create!(company: "Meteor", position: "Tech supp2", content: "helping end users2", user_id: alan.id)
 
 
 
@@ -29,6 +31,7 @@ usersBlog2 = Blog.create!(title: "Blog title2", content:"blog content2", user_id
 blogComment1 = Comment.create!(text: "some comment text for blog 1", blog_id: usersBlog1.id)
 blogComment2 = Comment.create!(text: "some comment text for blog 2", blog_id: usersBlog1.id)
 
+blogComment3 = Comment.create!(text: "some comment text for blog 3", blog_id: usersBlog2.id)
 
 #commentTest1 = Comment.create!(text: "some comment text for blog 1")
 #commentTest2 = Comment.create!(text: "some comment text for blog 2")
