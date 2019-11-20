@@ -5,6 +5,7 @@ class UserSerializer
   attribute :projects do |user|
     user.projects.map do |proj|
       {
+        id: proj.id,
         title: proj.title,
         content: proj.content,
         video_link: proj.video_link,
@@ -55,18 +56,6 @@ class UserSerializer
 
   attribute :blogs do |user|
       BlogSerializer.new(user.blogs).as_json["data"]
-  end
-
-  
-  attribute :comments do |user|
-    user.blogs.map do |blog|
-      
-      blog.comments.map do |comment|
-      {
-        text: comment.text,
-      }
-      end
-    end
   end
 
 end

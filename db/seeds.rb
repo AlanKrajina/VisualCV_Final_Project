@@ -28,10 +28,11 @@ experienceTest2 = Experience.create!(company: "Meteor", position: "Tech supp2", 
 usersBlog1 = Blog.create!(title: "Blog title1", content:"blog content1", user_id: alan.id)
 usersBlog2 = Blog.create!(title: "Blog title2", content:"blog content2", user_id: alan.id)
 
-blogComment1 = Comment.create!(text: "some comment text for blog 1", blog_id: usersBlog1.id)
+=begin blogComment1 = Comment.create!(text: "some comment text for blog 1", blog_id: usersBlog1.id)
 blogComment2 = Comment.create!(text: "some comment text for blog 2", blog_id: usersBlog1.id)
 
-blogComment3 = Comment.create!(text: "some comment text for blog 3", blog_id: usersBlog2.id)
+blogComment3 = Comment.create!(text: "some comment text for blog 3", blog_id: usersBlog2.id) 
+=end
 
 #commentTest1 = Comment.create!(text: "some comment text for blog 1")
 #commentTest2 = Comment.create!(text: "some comment text for blog 2")
