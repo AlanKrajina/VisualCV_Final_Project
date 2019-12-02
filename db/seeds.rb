@@ -31,15 +31,7 @@ blog1 = Blog.create!(title: "VisualCV Final Project", content:"Main technologies
     That is the beauty of React, you can easly access individual components, modify them, upgrade and improve.  
     Click on the Blog link to read more about this project.", blog_link: "https://alankrajina.github.io/visualcv_final_project", user_id: alan.id)
 
-blog2 = Blog.create!(title: "Flow of fetch in Rails&JS Project to view Index content", content:"In order to demonstrate student proficiency with what was learned about web development with JavaScript, requirements for project are: 
-    The application must be an HTML, CSS, and JavaScript frontend with a Rails API backend. 
-    All interactions between the client and the server must be handled asynchronously (AJAX) and use JSON as the communication format.
-    The JavaScript application must use Object Oriented JavaScript (classes) to encapsulate related data and behavior.
-    The domain model served by the Rails backend must include a resource with at least one has-many relationship. 
-    For example, if project is an Instagram clone, we might display a list of photos with associated comments.
-    The backend and frontend must collaborate to demonstrate Client-Server Communication. 
-    Application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). 
-    Client-side JavaScript code must use fetch with the appropriate HTTP verb, and Rails API should use RESTful conventions.
+blog2 = Blog.create!(title: "Flow of fetch in Rails&JS Project to view Index content", content:"
     The app allows us to:
     • Sign up, login or log out securely as user.
     • This app includes a third party signup/login via Google thanks to the OmniAuth gem.
@@ -52,12 +44,27 @@ blog2 = Blog.create!(title: "Flow of fetch in Rails&JS Project to view Index con
     • Renders one index and one show page via JavaScript and an Active Model Serialization JSON Backend.
     • Dynamically renders on the page at least one serialized has_many relationship through JSON using JavaScript.
     • Renders a form for creating a resource that is submitted dynamically and displayed through JavaScript and JSON without a page refresh.
-    • App does not use remote: true.", blog_link: "https://alankrajina.github.io/flow_of_fetch_in_rails_and_js_project_to_view_index_content", user_id: alan.id)
+    • App does not use remote: true.
+    **REQUIREMENTS**
+    The application must be an HTML, CSS, and JavaScript frontend with a Rails API backend. 
+    All interactions between the client and the server must be handled asynchronously (AJAX) and use JSON as the communication format.
+    The JavaScript application must use Object Oriented JavaScript (classes) to encapsulate related data and behavior.
+    The domain model served by the Rails backend must include a resource with at least one has-many relationship. 
+    For example, if project is an Instagram clone, we might display a list of photos with associated comments.
+    The backend and frontend must collaborate to demonstrate Client-Server Communication. 
+    Application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). 
+    Client-side JavaScript code must use fetch with the appropriate HTTP verb, and Rails API should use RESTful conventions.", blog_link: "https://alankrajina.github.io/flow_of_fetch_in_rails_and_js_project_to_view_index_content", user_id: alan.id)
 
 blog3 = Blog.create!(title: "PizzaOnRailsApp - Rails project", content:"In this project I have build a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. 
     The goal of the application is to build a Content Management System. 
     There is no emphasis on HTML or CSS, and there is no JS required for the project. I added some CSS just to get a basic look for the App.
-    Requirements:
+    The app uses the dotenv gem for environment variables and .env file in the root of the app with GOOGLE_CLIENT_ID=your_key and GOOGLE_CLIENT_SECRET=your_secret. 
+    The app provides a database and web interface for users to:
+    • Sign up, login or log out securely as user.
+    • User can see all pizzas but can only create, update, and delete (CRUD) his own created pizza.
+    • User can browse pizzas via name.
+    • User and pizza inputs are validated.
+    **REQUIREMENTS**
     Use the Ruby on Rails framework.
     Models must include at least one has_many, at least one belongs_to, and at least two has_many :through relationships, include a many-to-many relationship implemented with has_many :through associations. The join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
     Models must include reasonable validations for the simple attributes and should defend against invalid data.
@@ -68,18 +75,12 @@ blog3 = Blog.create!(title: "PizzaOnRailsApp - Rails project", content:"In this 
     Forms should correctly display validation errors.
     Application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app.
     • Logic present in controllers should be encapsulated as methods in models.
-    • Views should use helper methods and partials when appropriate.
-    The app uses the dotenv gem for environment variables and .env file in the root of the app with GOOGLE_CLIENT_ID=your_key and GOOGLE_CLIENT_SECRET=your_secret. 
-    The app provides a database and web interface for users to:
-    • Sign up, login or log out securely as user.
-    • User can see all pizzas but can only create, update, and delete (CRUD) his own created pizza.
-    • User can browse pizzas via name.
-    • User and pizza inputs are validated.", blog_link: "https://alankrajina.github.io/pizzaonrailsapp_-_rails_project", user_id: alan.id)
+    • Views should use helper methods and partials when appropriate.", blog_link: "https://alankrajina.github.io/pizzaonrailsapp_-_rails_project", user_id: alan.id)
 
 blog4 = Blog.create!(title: "Projects Track App", content:"Projects_Tracks is an app that allows user to signup and create a new account or login to their existing account. 
     User will have the ability to Create a project, Read the info, Update and Delete. 
     User will have his own space to check only his projects and to edit them. On the app homepage all users can see all of the projects created. A user can only update and delete his own projects.
-    List of all requirements:
+    **REQUIREMENTS**
     • Build an MVC Sinatra application.
     • Use ActiveRecord with Sinatra.
     • Use multiple models.
