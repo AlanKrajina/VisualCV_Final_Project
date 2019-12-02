@@ -3,10 +3,6 @@ class Api::V1::BlogsController < ApplicationController
     def index
         @blogs = current_user.blogs
         render json: BlogSerializer.new(@blogs)
-
-
-  #      @blogs = Blog.all
-  #      render json: @blogs
     end
 
     def show

@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_11_09_115847) do
   create_table "blogs", force: :cascade do |t|
     t.string "title"
     t.string "content"
+    t.string "blog_link"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
