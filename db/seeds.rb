@@ -46,14 +46,14 @@ blog2 = Blog.create!(title: "Flow of fetch in Rails&JS Project to view Index con
     • Renders a form for creating a resource that is submitted dynamically and displayed through JavaScript and JSON without a page refresh.
     • App does not use remote: true.
     **REQUIREMENTS**
-    The application must be an HTML, CSS, and JavaScript frontend with a Rails API backend. 
-    All interactions between the client and the server must be handled asynchronously (AJAX) and use JSON as the communication format.
-    The JavaScript application must use Object Oriented JavaScript (classes) to encapsulate related data and behavior.
-    The domain model served by the Rails backend must include a resource with at least one has-many relationship. 
-    For example, if project is an Instagram clone, we might display a list of photos with associated comments.
-    The backend and frontend must collaborate to demonstrate Client-Server Communication. 
-    Application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). 
-    Client-side JavaScript code must use fetch with the appropriate HTTP verb, and Rails API should use RESTful conventions.", blog_link: "https://alankrajina.github.io/flow_of_fetch_in_rails_and_js_project_to_view_index_content", user_id: alan.id)
+    • The application must be an HTML, CSS, and JavaScript frontend with a Rails API backend. 
+    • All interactions between the client and the server must be handled asynchronously (AJAX) and use JSON as the communication format.
+    • The JavaScript application must use Object Oriented JavaScript (classes) to encapsulate related data and behavior.
+    • The domain model served by the Rails backend must include a resource with at least one has-many relationship. 
+    • For example, if project is an Instagram clone, we might display a list of photos with associated comments.
+    • The backend and frontend must collaborate to demonstrate Client-Server Communication. 
+    • Application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). 
+    • Client-side JavaScript code must use fetch with the appropriate HTTP verb, and Rails API should use RESTful conventions.", blog_link: "https://alankrajina.github.io/flow_of_fetch_in_rails_and_js_project_to_view_index_content", user_id: alan.id)
 
 blog3 = Blog.create!(title: "PizzaOnRailsApp - Rails project", content:"In this project I have build a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. 
     The goal of the application is to build a Content Management System. 
@@ -65,15 +65,14 @@ blog3 = Blog.create!(title: "PizzaOnRailsApp - Rails project", content:"In this 
     • User can browse pizzas via name.
     • User and pizza inputs are validated.
     **REQUIREMENTS**
-    Use the Ruby on Rails framework.
-    Models must include at least one has_many, at least one belongs_to, and at least two has_many :through relationships, include a many-to-many relationship implemented with has_many :through associations. The join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
-    Models must include reasonable validations for the simple attributes and should defend against invalid data.
-    There must be included at least one class level ActiveRecord scope method that is chainable, meaning that it must use ActiveRecord Query methods within it (such as .where and .order) rather than native ruby methods (such as #find_all or #sort).
-    Must include and make use of a nested resource with the appropriate RESTful URLs.
+    • Models must include at least one has_many, at least one belongs_to, and at least two has_many :through relationships, include a many-to-many relationship implemented with has_many :through associations. The join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
+    • Models must include reasonable validations for the simple attributes and should defend against invalid data.
+    • There must be included at least one class level ActiveRecord scope method that is chainable, meaning that it must use ActiveRecord Query methods within it (such as .where and .order) rather than native ruby methods (such as #find_all or #sort).
+    • Include and make use of a nested resource with the appropriate RESTful URLs.
     • Nested new route with form that relates to the parent resource.
     • Nested index or show route.
-    Forms should correctly display validation errors.
-    Application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app.
+    • Forms should correctly display validation errors.
+    • Application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app.
     • Logic present in controllers should be encapsulated as methods in models.
     • Views should use helper methods and partials when appropriate.", blog_link: "https://alankrajina.github.io/pizzaonrailsapp_-_rails_project", user_id: alan.id)
 
