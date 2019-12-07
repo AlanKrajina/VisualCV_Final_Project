@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-  wrap_parameters :user, include: [:username, :password] # resolves password nill issue
+  wrap_parameters :user, include: [:username, :password]
 
 
   # GET /users
@@ -20,7 +20,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-if @user.save
+    if @user.save
       session[:user_id] = @user.id
       render json: UserSerializer.new(@user), status: :created
     else
@@ -54,7 +54,5 @@ if @user.save
     # Only allow a trusted parameter "white list" through.
     def user_params
       params.require(:user).permit(:username, :password)
-      #params.require(:user).permit!
-
     end
 end

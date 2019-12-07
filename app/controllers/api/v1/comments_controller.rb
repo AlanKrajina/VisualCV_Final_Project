@@ -1,34 +1,29 @@
 class Api::V1::CommentsController < ApplicationController
 
     def index
-            @comments = current_user.comments # not blog?
-            render json: CommentSerializer.new(@comments)
+      @comments = current_user.comments
+      render json: CommentSerializer.new(@comments)
     end
-
 
     def show
-        @comment = Comment.find_by(id: params[:id])
-        comment_json = CommentSerializer.new(@comment).serialized_json
-        render json: comment_json
+      @comment = Comment.find_by(id: params[:id])
+      comment_json = CommentSerializer.new(@comment).serialized_json
+      render json: comment_json
     end
 
+    def create
+      current_blog = Blog.find(params["blog_id"])
+      @comment = current_blog.comments.build(comment_params)
 
-
-  def create
-
-    current_blog = Blog.find(params["blog_id"])
-
-    @comment = current_blog.comments.build(comment_params)
-
-    if @comment.save
-      render json:  CommentSerializer.new(@comment), status: :created
-    else
-      error_resp = {
-        error: @comment.errors.full_messages.to_sentence
-      }
-      render json: error_resp, status: :unprocessable_entity
+      if @comment.save
+        render json:  CommentSerializer.new(@comment), status: :created
+      else
+        error_resp = {
+          error: @comment.errors.full_messages.to_sentence
+        }
+        render json: error_resp, status: :unprocessable_entity
+      end
     end
-  end
   
 
   def destroy
@@ -43,12 +38,9 @@ class Api::V1::CommentsController < ApplicationController
     end
   end 
 
-
-
     private
 
     def comment_params
         params.require(:comment).permit(:text)
     end 
-
 end
