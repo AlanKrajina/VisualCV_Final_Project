@@ -2,8 +2,27 @@ alan = User.create(username: "Alan", password: "password")
 alan = User.first
 
 project1 = Project.create!(title: "VisualCV_Final_Project - React Redux Rails Project", content: "VisualCV is a Full Stack web application created using Rails backend and React/Redux frontend. It is a single page application that utilizes Create, Read and Delete functions of persistent storage. App uses RESTful architectural style with the implementation of the client and server done independently, meaning that the code on the client side can be changed at any time without affecting the operation of the server, and the code on the server side can be changed without affecting the operation of the client. Utilizes GET and POST fetch requests to get and submit data to the database, Thunk middleware for async logic that interacts with the store and in addition uses EXTERNAL and INTERNAL APIs. Project is build upon ES6 JS standards.", video_link: "https://www.youtube.com/watch?v=NoJUi5paX_s", github: "https://github.com/AlanKrajina/VisualCV_Final_Project_frontend", user_id: alan.id)
-project2 = Project.create!(title: "Learn_fullstack.app - JS SPA Project", content: "Project is a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. Main requirement is to add dynamic features to previous Rails application that are possible only through JavaScript and JSON API. For the first requirement we are to use our previous Rails app and upon that one build dynamic JS features. I decided to create a new Rails app just to get more practice. I added additional features and functionalities to differ from previous Rails project. For the second requirement adding dynamic JS I wrote a blog describing step by step flow of fetch in the app that gives the ability for the User to get Index data without refreshing the page. That feature can be considered as a React feature without using React.", video_link: "https://www.youtube.com/watch?v=AGpVyXurpQ4", github: "https://github.com/AlanKrajina/learn_fullstack.app", user_id: alan.id)
-project3 = Project.create!(title: "PizzaOnRailsApp - Rails Portfolio Project", content: "This Project is a fullstack Ruby on Rails application that uses Rails views to render and display backend data to the User on frontend. The goal of the application is to build a Content Management System. There is no emphasis on HTML or CSS, and there is no JS required for the project. I added some CSS just to get a basic look for the App. App uses Active Record models to manipulate data stored in a relational database and sqlite3 as database.", video_link: "https://www.youtube.com/watch?v=Kd50Mec400g&t=2s", github: "https://github.com/AlanKrajina/PizzaOnRailsApp", user_id: alan.id)
+project2 = Project.create!(title: "Learn_fullstack.app - JS SPA Project", content: "Project is a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. Main requirement is to add dynamic features to previous Rails application that are possible only through JavaScript and JSON API. For the first requirement we are to use our previous Rails app and upon that one build dynamic JS features. I decided to create a new Rails app just to get more practice. I added additional features and functionalities to differ from previous Rails project. For the second requirement adding dynamic JS I wrote a blog describing step by step flow of fetch in the app that gives the ability for the User to get Index data without refreshing the page. That feature can be considered as a React feature without using React.
+    The app allows us to:
+    • Sign up, login or log out securely as user.
+    • This app includes a third party signup/login via Google thanks to the OmniAuth gem.
+    • User can see all lessons but can only create, update, and delete (CRUD) his own created lesson.
+    • User can browse lessons via name.
+    • User can view users with most lessons created.
+    • All inputs are validated.
+    • App translates JSON responses into JavaScript Model Objects using constructor syntax.
+    • Includes two prototype methods.
+    • Renders one index and one show page via JavaScript and an Active Model Serialization JSON Backend.
+    • Dynamically renders on the page at least one serialized has_many relationship through JSON using JavaScript.
+    • Renders a form for creating a resource that is submitted dynamically and displayed through JavaScript and JSON without a page refresh.
+    • App does not use remote: true.", video_link: "https://www.youtube.com/watch?v=AGpVyXurpQ4", github: "https://github.com/AlanKrajina/learn_fullstack.app", user_id: alan.id)
+project3 = Project.create!(title: "PizzaOnRailsApp - Rails Portfolio Project", content: "This Project is a fullstack Ruby on Rails application that uses Rails views to render and display backend data to the User on frontend. The goal of the application is to build a Content Management System. There is no emphasis on HTML or CSS, and there is no JS required for the project. I added some CSS just to get a basic look for the App. App uses Active Record models to manipulate data stored in a relational database and sqlite3 as database.
+    The app uses the dotenv gem for environment variables and .env file in the root of the app with GOOGLE_CLIENT_ID=your_key and GOOGLE_CLIENT_SECRET=your_secret. 
+    The app provides a database and web interface for users to:
+    • Sign up, login or log out securely as user.
+    • User can see all pizzas but can only create, update, and delete (CRUD) his own created pizza.
+    • User can browse pizzas via name.
+    • User and pizza inputs are validated.", video_link: "https://www.youtube.com/watch?v=Kd50Mec400g&t=2s", github: "https://github.com/AlanKrajina/PizzaOnRailsApp", user_id: alan.id)
 project4 = Project.create!(title: "Projects_track - Sinatra Portfolio Project", content: "Projects_Tracks is an app that allows User to signup and create a new account or login to their existing account. User will have the ability to Create a project, Read the info, Update and Delete. User will have his own space to check only his projects and to edit them. On the app homepage all users can see all of the projects created. A user can only update and delete his own projects. As a prelude to Rails App uses Sinatra to focus on quickly creating web-applications in Ruby with minimal effort. App implements MVC features and ActiveRecord with Sinatra.", video_link: "https://www.youtube.com/watch?v=RmwHHkkomrU&t=5s", github: "https://github.com/AlanKrajina/projects_track", user_id: alan.id)
 project5 = Project.create!(title: "Best_Online_Coding_Bootcamps - CLI Data Gem Portfolio Project", content: "Best_Online_Coding_Bootcamps CLI Gem will help you find the best online bootcamp for you. This list of the 46 best online coding bootcamps offers a range of subjects such as web development, data science, and cyber security. Gem is 2 level deep with the first level giving information like the name, rating and subjects it offers and the second level lists the bootcamp webpage, locations, programs and overall info. The project is based on Object Oriented Ruby with an emphasis on scraping data from a URL using Nokogiri.", video_link: "https://www.youtube.com/watch?v=gLyTMg_2Wog&t=1s", github: "https://github.com/AlanKrajina/Best_Online_Coding_Bootcamps", user_id: alan.id)
 
@@ -32,20 +51,7 @@ blog1 = Blog.create!(title: "VisualCV Final Project", content:"Main technologies
     Click on the Blog link to read more about this project.", blog_link: "https://alankrajina.github.io/visualcv_final_project", user_id: alan.id)
 
 blog2 = Blog.create!(title: "Flow of fetch in Rails&JS Project to view Index content", content:"
-    The app allows us to:
-    • Sign up, login or log out securely as user.
-    • This app includes a third party signup/login via Google thanks to the OmniAuth gem.
-    • User can see all lessons but can only create, update, and delete (CRUD) his own created lesson.
-    • User can browse lessons via name.
-    • User can view users with most lessons created.
-    • All inputs are validated.
-    • App translates JSON responses into JavaScript Model Objects using constructor syntax.
-    • Includes two prototype methods.
-    • Renders one index and one show page via JavaScript and an Active Model Serialization JSON Backend.
-    • Dynamically renders on the page at least one serialized has_many relationship through JSON using JavaScript.
-    • Renders a form for creating a resource that is submitted dynamically and displayed through JavaScript and JSON without a page refresh.
-    • App does not use remote: true.
-    **REQUIREMENTS**
+    **PROJECT REQUIREMENTS**
     • The application must be an HTML, CSS, and JavaScript frontend with a Rails API backend. 
     • All interactions between the client and the server must be handled asynchronously (AJAX) and use JSON as the communication format.
     • The JavaScript application must use Object Oriented JavaScript (classes) to encapsulate related data and behavior.
@@ -55,16 +61,8 @@ blog2 = Blog.create!(title: "Flow of fetch in Rails&JS Project to view Index con
     • Application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). 
     • Client-side JavaScript code must use fetch with the appropriate HTTP verb, and Rails API should use RESTful conventions.", blog_link: "https://alankrajina.github.io/flow_of_fetch_in_rails_and_js_project_to_view_index_content", user_id: alan.id)
 
-blog3 = Blog.create!(title: "PizzaOnRailsApp - Rails project", content:"In this project I have build a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. 
-    The goal of the application is to build a Content Management System. 
-    There is no emphasis on HTML or CSS, and there is no JS required for the project. I added some CSS just to get a basic look for the App.
-    The app uses the dotenv gem for environment variables and .env file in the root of the app with GOOGLE_CLIENT_ID=your_key and GOOGLE_CLIENT_SECRET=your_secret. 
-    The app provides a database and web interface for users to:
-    • Sign up, login or log out securely as user.
-    • User can see all pizzas but can only create, update, and delete (CRUD) his own created pizza.
-    • User can browse pizzas via name.
-    • User and pizza inputs are validated.
-    **REQUIREMENTS**
+blog3 = Blog.create!(title: "PizzaOnRailsApp - Rails project", content:"
+    **PROJECT REQUIREMENTS**
     • Models must include at least one has_many, at least one belongs_to, and at least two has_many :through relationships, include a many-to-many relationship implemented with has_many :through associations. The join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
     • Models must include reasonable validations for the simple attributes and should defend against invalid data.
     • There must be included at least one class level ActiveRecord scope method that is chainable, meaning that it must use ActiveRecord Query methods within it (such as .where and .order) rather than native ruby methods (such as #find_all or #sort).
@@ -76,10 +74,8 @@ blog3 = Blog.create!(title: "PizzaOnRailsApp - Rails project", content:"In this 
     • Logic present in controllers should be encapsulated as methods in models.
     • Views should use helper methods and partials when appropriate.", blog_link: "https://alankrajina.github.io/pizzaonrailsapp_-_rails_project", user_id: alan.id)
 
-blog4 = Blog.create!(title: "Projects Track App", content:"Projects_Tracks is an app that allows user to signup and create a new account or login to their existing account. 
-    User will have the ability to Create a project, Read the info, Update and Delete. 
-    User will have his own space to check only his projects and to edit them. On the app homepage all users can see all of the projects created. A user can only update and delete his own projects.
-    **REQUIREMENTS**
+blog4 = Blog.create!(title: "Projects Track App", content:"
+    **PROJECT REQUIREMENTS**
     • Build an MVC Sinatra application.
     • Use ActiveRecord with Sinatra.
     • Use multiple models.
