@@ -36,11 +36,11 @@ module VisualCVFinalProject
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'https://visualcv.herokuapp.com'
         resource '*', headers: :any, methods: [:get, :patch, :put, :delete, :post, :options]
       end
     end    
-    
+
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore, key: '_cookie_name'
 
