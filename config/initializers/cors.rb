@@ -8,10 +8,9 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://visualcv.herokuapp.com'
+    origins '*'
 
     resource '*',
-      origins: 'https://visualcv.herokuapp.com'
       headers: :any,
       credentials: true,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
