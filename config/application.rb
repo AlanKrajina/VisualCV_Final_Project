@@ -40,7 +40,7 @@ module VisualCVFinalProject
       allow do
         origins 'https://visualcv.herokuapp.com','http://visualcv.herokuapp.com', 'https://visualcvreact.herokuapp.com' , 'http://visualcvreact.herokuapp.com'
         resource(
-          '*',
+          'https://visualcv.herokuapp.com',
           headers: :any,
           methods: [:get, :patch, :put, :delete, :post, :options]
           )
