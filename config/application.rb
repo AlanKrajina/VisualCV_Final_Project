@@ -38,7 +38,7 @@ module VisualCVFinalProject
 
       config.middleware.insert_before 0, Rack::Cors do
         allow do
-          origins 'https://visualcvreact.herokuapp.com/', 'http://localhost:3001', 'http://visualcvreact.herokuapp.com/'
+          origins 'https://visualcvreact.herokuapp.com', 'http://localhost:3001', 'http://visualcvreact.herokuapp.com'
           resource '*', :headers => :any, :methods => [:get, :patch, :put, :delete, :post, :options]            
         end
       end 
